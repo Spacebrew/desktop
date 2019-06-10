@@ -3,6 +3,10 @@
   "productName": "spacebrew-desktop",
   "version": "0.4.1",
   "description": "My Electron application description",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spacebrew/desktop.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "start": "node_modules/@electron-forge/cli/dist/electron-forge.js start",
@@ -38,6 +42,18 @@
           "name": "@electron-forge/maker-rpm",
           "config": {}
         }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "spacebrew",
+              "name": "desktop"
+            },
+            "prerelease": true
+          }
+        }
       ]
     }
   },
@@ -55,6 +71,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.39",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.39",
     "@electron-forge/maker-zip": "^6.0.0-beta.39",
+    "@electron-forge/publisher-github": "^6.0.0-beta.39",
     "electron": "5.0.3"
   }
 }
