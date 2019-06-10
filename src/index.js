@@ -14,15 +14,18 @@ let mainWindow;
 const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    webPreferences: {
+      nodeIntegration: false
+    }
+    //width: 800,
+    //height: 600,
   });
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/spacebrew/admin/index.html`);//http://localhost:9000/`);//file://${__dirname}/index.html`);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {

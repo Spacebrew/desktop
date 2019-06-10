@@ -1,14 +1,14 @@
 {
   "name": "spacebrew-desktop",
   "productName": "spacebrew-desktop",
-  "version": "1.0.0",
+  "version": "0.4.1",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
+    "start": "node_modules/@electron-forge/cli/dist/electron-forge.js start",
+    "package": "node_modules/@electron-forge/cli/dist/electron-forge.js package",
+    "make": "node_modules/@electron-forge/cli/dist/electron-forge.js make",
+    "publish": "node_modules/@electron-forge/cli/dist/electron-forge.js publish",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
