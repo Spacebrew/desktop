@@ -1,0 +1,3 @@
+[submodule "src/spacebrew"]
+	path = src/spacebrew
+	url = https://github.com/spacebrew/spacebrew.git
